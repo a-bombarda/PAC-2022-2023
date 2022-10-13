@@ -47,7 +47,7 @@ public class Sommatore {
 	 * @return the somma
 	 */
 	int getSomma() {
-		return n1 - n2;
+		return n1 + n2;
 	}
 	
 	/**
