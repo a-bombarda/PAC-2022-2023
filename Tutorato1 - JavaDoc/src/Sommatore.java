@@ -41,6 +41,10 @@ public class Sommatore {
 		this.n1 = n1;
 	}
 	
+	void setN2(int n2) {
+		this.n2 = n2;
+	}
+	
 	/**
 	 * Gets the somma.
 	 *
