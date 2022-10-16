@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+ sommatore:
+  image: openjdk:14
+  container_name: "sommatore"
+  volumes:
+   - ./sommatore.jar:/tmp/sommatore.jar
+   - ./numeri.txt:/tmp/numeri.txt
+  working_dir: /tmp
+  command: ['java', '-jar', 'sommatore.jar']
