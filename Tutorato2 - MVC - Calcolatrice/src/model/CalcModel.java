@@ -1,4 +1,4 @@
-package mvcCompleto;
+package model;
 
 import java.util.Observable;
 
@@ -15,7 +15,7 @@ public class CalcModel extends Observable{
 	private Integer m_total; 
 
 	// Costruttore: chiama il reset per (re)impostare il valore inizale
-	CalcModel() {
+	public CalcModel() {
 		reset();
 	}
 

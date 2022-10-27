@@ -1,5 +1,9 @@
 package mvcCompleto;
 
+import controller.CalcController;
+import model.CalcModel;
+import view.CalcView;
+
 public class CalcMVC {
 	// Main
 	public static void main(String[] args) {

@@ -1,6 +1,9 @@
-package mvcCompleto;
+package controller;
 
 import java.awt.event.*;
+
+import model.CalcModel;
+import view.CalcView;
 
 public class CalcController {
     //Riferimenti, il controller deve interagire sia con la view che con il modello
@@ -9,7 +12,7 @@ public class CalcController {
     
     
     //Costruttore
-    CalcController(CalcModel model, CalcView view) {
+    public CalcController(CalcModel model, CalcView view) {
     	//alloco i riferimenti passati
         m_model = model;
         m_view  = view;

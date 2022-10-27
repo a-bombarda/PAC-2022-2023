@@ -1,7 +1,10 @@
-package mvcCompleto;
+package view;
 
 import java.awt.*;
 import javax.swing.*;
+
+import model.CalcModel;
+
 import java.awt.event.*;
 import java.util.Observable;
 import java.util.Observer;
@@ -9,7 +12,7 @@ import java.util.Observer;
 // View della Calcolatrice. Implementiamo "Observer" per fare in modo di
 // controllare le modifiche sul model e venir notificati ad ogni modifica
 // del model
-class CalcView extends JFrame implements Observer {
+public class CalcView extends JFrame implements Observer {
     // Campi della view
     private JTextField m_userInputTf = new JTextField(5);
     private JTextField m_totalTf     = new JTextField(20);
@@ -20,7 +23,7 @@ class CalcView extends JFrame implements Observer {
     private CalcModel m_model;
     
     // Costruttore
-    CalcView(CalcModel model) {
+    public CalcView(CalcModel model) {
     	// Alloco il riferimento passato relativo al modello
     	m_model = model;
     	// Il model implementa Observable, aggiungo al modello un Observer 
@@ -60,22 +63,22 @@ class CalcView extends JFrame implements Observer {
      */
     // Getter per rendere disponibile all'esterno il valore del campo 
     // testo del textField
-    String getUserInput() {
+    public String getUserInput() {
         return m_userInputTf.getText();
     }    
     
     // Rende disponibile all'esterno l'eventuale testo del messaggio di errore 
-    void showError(String errMessage) {
+    public void showError(String errMessage) {
         JOptionPane.showMessageDialog(this, errMessage);
     }
     
     // Permette di impostare dall'esterno il listener del bottone moltiplica
-    void addMultiplyListener(ActionListener mal) {
+    public void addMultiplyListener(ActionListener mal) {
         m_multiplyBtn.addActionListener(mal);
     }
     
     // Permette di impostare dall'esterno il listener del bottone clear
-    void addClearListener(ActionListener cal) {
+    public void addClearListener(ActionListener cal) {
         m_clearBtn.addActionListener(cal);
     }
 
