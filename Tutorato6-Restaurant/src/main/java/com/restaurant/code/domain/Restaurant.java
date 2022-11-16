@@ -2,6 +2,8 @@ package com.restaurant.code.domain;
 
 public class Restaurant {
 
+	// Utiliziamo questo campo statico per dare un ID univoco
+	// ad ogni ristorante
 	private static long N_RESTAURANT = 0; 
 	
 	private Long id; 

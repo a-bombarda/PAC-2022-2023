@@ -26,6 +26,7 @@ public class Tutorato6RestaurantClientApplication {
 	@Bean
     CommandLineRunner run(RestTemplate restTemplate) {
     	return args -> {
+    		// Chiamata REST dell'API che ritorna la lista di tutti i ristoranti 
 			ArrayList<Restaurant> list = restTemplate.getForObject(
     				"http://localhost:8080/restaurants", ArrayList.class);
     		System.out.println(list);
