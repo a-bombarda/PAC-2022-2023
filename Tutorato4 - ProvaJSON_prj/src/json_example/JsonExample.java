@@ -16,7 +16,7 @@ import org.json.JSONObject;
  * ATTENZIONE: attualmente ci sono dei limiti sull'uso di questo servizio, se non 
  * dovesse restituire un Json, impostare una API Key
  * 
- * Corso di informatica 3B, Unibg, A.A. 2019-2020
+ * Corso di informatica Progettazione, Algoritmi e Computabilità, Unibg, A.A. 2022-2023
  */
 
 public class JsonExample {
