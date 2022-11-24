@@ -19,6 +19,12 @@
         <Id>3676</Id>
         <Age>28</Age>
     </Employee>
+   
+   <Employee type="test">
+        <Name>Prova</Name>
+        <Id>1234</Id>
+        <Age>29</Age>
+    </Employee>
     
 </Personnel>
 

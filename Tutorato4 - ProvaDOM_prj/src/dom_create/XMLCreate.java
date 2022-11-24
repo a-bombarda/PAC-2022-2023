@@ -122,6 +122,10 @@ public class XMLCreate {
 		Element autore = d.createElement("autore");
 		Element titolo = d.createElement("titolo");
 		Element editore = d.createElement("editore");
+		
+		Element prova = d.createElement("PROVA");
+		autore.appendChild(prova);
+		
 		autore.appendChild(d.createComment("Autore del testo"));
 		titolo.appendChild(d.createComment("Titolo del testo"));
 		editore.appendChild(d.createComment("Editore del testo"));
