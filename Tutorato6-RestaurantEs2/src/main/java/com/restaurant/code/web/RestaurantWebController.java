@@ -34,10 +34,25 @@ public class RestaurantWebController {
 	
 	/* Crea un nuovo ristorante. */ 
 	@PostMapping("/restaurants")
-	public Restaurant addRestaurant(@RequestParam(defaultValue = "", name = "name") String name, 
+	public Restaurant addRestaurant(@RequestParam(defaultValue = "") String name, 
 			@RequestParam String location) {
 		Restaurant restaurant = restaurantService.createRestaurant(name, location);
 		return restaurant;
 	}	
+	
+	/* Trova tutti i ristoranti con iniziale. */ 
+	@GetMapping("/restaurants/prefix/{restaurantName}")
+	public Collection<Restaurant> getRestaurants(@PathVariable String restaurantName) {
+		Collection<Restaurant> restaurants = 
+				restaurantService.getAllRestaurantsByNameStartingChars(restaurantName);
+		return restaurants;
+	}
+	
+	/* Trova il ristorante con nome scelto e cancella */ 
+	@GetMapping("/restaurants/delete/{restaurantName}")
+	public Boolean deleteRestaurant(@PathVariable String restaurantName) {
+		Boolean restaurant = restaurantService.deleteRestaurantByName(restaurantName);
+		return restaurant;
+	}
 
 }
